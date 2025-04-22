@@ -19,5 +19,5 @@
         <input type = "password" name = "password"  placeholder = "password" > <br>
         <input type = "password" name = "password_confirmation"  placeholder = "Konfirmasi password" > <br>
         <button type = "submit">Simpan</button>
-        <a href="/user/create"><button type="button">Masuk kehalaman contact</button></a>
+        <a href="/contact/create"><button type="button">Masuk kehalaman contact</button></a>
 </form>

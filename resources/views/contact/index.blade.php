@@ -19,5 +19,5 @@
     <input type="text" name="phone" placeholder="No. HP" value="{{ old('phone') }}"><br>
     <textarea name="message" placeholder="Pesan">{{ old('message') }}</textarea><br>
     <button type="submit">Kirim</button>
-    <a href="/user/create"><button type="button">Masuk kehalaman user</button></a>
+    <a href="/"><button type="button">Masuk kehalaman user</button></a>
 </form>
