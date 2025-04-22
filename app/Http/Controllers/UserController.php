@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-cLass UserController extends Controller
+class UserController extends Controller
 {
     public function create()
     {
@@ -12,7 +12,7 @@ cLass UserController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:100', 
-            'email' => 'required|email unique:users,email',
+            'email' => 'required|unique:users,email',
             'password' => 'required|min:6|confirmed',
         ]);
 
