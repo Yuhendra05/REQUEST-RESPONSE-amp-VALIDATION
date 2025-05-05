@@ -42,6 +42,8 @@
         </select><br><br>
 
         <button type="submit">Simpan</button>
+        <a href="/"><button type="button">Masuk kehalaman user</button></a>
+        <a href="/contact/create"><button type="button">Masuk kehalaman contact</button></a>
     </form>
 </body>
 </html>
