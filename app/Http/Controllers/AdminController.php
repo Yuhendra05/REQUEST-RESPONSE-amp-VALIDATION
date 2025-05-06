@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// use App\Models\Admin; // Uncomment ini jika menggunakan model Admin untuk simpan ke DB
 
 class AdminController extends Controller
 {
     /**
-     * Tampilkan form input admin
+     * Menampilkan form input data admin
+     *
+     * @return \Illuminate\View\View
      */
     public function create()
     {
@@ -15,10 +18,14 @@ class AdminController extends Controller
     }
 
     /**
-     * Simpan data admin setelah divalidasi
+     * Menyimpan data admin setelah validasi
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
+        // Validasi input
         $validated = $request->validate([
             'nama'   => ['required', 'string', 'max:100'],
             'email'  => ['required', 'email'],
@@ -27,9 +34,10 @@ class AdminController extends Controller
             'role'   => ['required', 'in:Super Admin,Kasir'],
         ]);
 
-        // Di sini bisa disimpan ke database, misalnya:
+        // Jika ingin menyimpan ke database:
         // Admin::create($validated);
 
+        // Redirect kembali dengan pesan sukses
         return redirect()->back()->with('success', 'Data berhasil disimpan!');
     }
 }
